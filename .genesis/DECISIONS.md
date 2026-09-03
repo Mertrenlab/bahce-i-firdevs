@@ -12,6 +12,8 @@ Bu kayıt append-only'dir. Bir kararı değiştirmek için eski gövdeyi düzenl
 | ADR-004 | 2026-09-03 | Türkçe, TRY ve resmi logo ile tek pazar kur | accepted |
 | ADR-005 | 2026-09-03 | WhatsApp akışını kritik yol say | accepted |
 | ADR-006 | 2026-09-03 | Vercel önizleme ve commit rollback kullan | accepted |
+| ADR-DEP-001 | 2026-09-03 | Vitest V8 coverage sağlayıcısını ekle | accepted |
+| ADR-DEP-002 | 2026-09-03 | Prettier biçim denetimini ekle | accepted |
 
 ---
 
@@ -102,6 +104,36 @@ Bu kayıt append-only'dir. Bir kararı değiştirmek için eski gövdeyi düzenl
 **Consequences.** Ortam sırrı olmayan build taşınabilir kalır. Domain bağlantısı yayın aşamasında ayrıca yapılır.
 
 **Considered alternatives.** Sunucuyu elle yönetmek gereksiz bakım yükü nedeniyle reddedildi.
+
+---
+
+## ADR-DEP-001: Vitest V8 coverage sağlayıcısını ekle
+
+- **Status:** accepted
+- **Date:** 2026-09-03
+
+**Context.** Genesis kalite sözleşmesi satır ve dal kapsam eşiklerinin otomatik ölçülmesini gerektirir.
+
+**Decision.** Vitest ile aynı `4.1.2` sürümündeki `@vitest/coverage-v8` geliştirme bağımlılığı kullanılır.
+
+**Consequences.** CI kapsam eşiklerini bloklayabilir; paket yalnız geliştirme aşamasında çalışır.
+
+**Considered alternatives.** Kapsamı elle takip etmek tekrarlanabilir olmadığı, başka coverage motoru eklemek ise gereksiz olduğu için reddedildi.
+
+---
+
+## ADR-DEP-002: Prettier biçim denetimini ekle
+
+- **Status:** accepted
+- **Date:** 2026-09-03
+
+**Context.** Yerel kanca ve CI, tekrar üretilebilir bir biçim kontrolü gerektirir.
+
+**Decision.** Prettier yalnız geliştirme bağımlılığı olarak eklenir ve `format:check` scriptiyle çalışır.
+
+**Consequences.** Biçim tartışması otomasyona devredilir; çalışma zamanı paketi büyümez.
+
+**Considered alternatives.** Yalnız ESLint kullanmak CSS ve Markdown dosyalarını kapsamadığı için reddedildi.
 
 ## How to add a new ADR
 
