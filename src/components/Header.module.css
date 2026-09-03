@@ -1,0 +1,168 @@
+.announcement {
+  align-items: center;
+  background: var(--forest);
+  color: var(--cream);
+  display: flex;
+  font-size: 0.72rem;
+  gap: 0.75rem;
+  justify-content: center;
+  letter-spacing: 0.12em;
+  min-height: 34px;
+  padding: 0.4rem 1rem;
+  text-transform: uppercase;
+}
+
+.announcementDot {
+  color: var(--copper-light);
+}
+
+.header {
+  align-items: center;
+  backdrop-filter: blur(18px);
+  background: color-mix(in srgb, var(--cream) 92%, transparent);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto minmax(220px, 1fr);
+  min-height: 88px;
+  padding: 0.7rem clamp(1rem, 4vw, 4.5rem);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.brand {
+  align-items: center;
+  color: var(--forest);
+  display: flex;
+  font-family: var(--font-display);
+  font-size: clamp(1.28rem, 2vw, 1.65rem);
+  gap: 0.5rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.brand img {
+  height: 58px;
+  object-fit: contain;
+  width: 66px;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  gap: clamp(1.2rem, 2.7vw, 2.7rem);
+}
+
+.nav a {
+  color: var(--forest);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding-block: 0.5rem;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav a::after {
+  background: var(--copper);
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+  width: 100%;
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.actions {
+  align-items: center;
+  display: flex;
+  gap: 0.7rem;
+  justify-content: flex-end;
+}
+
+.phone,
+.whatsapp {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 700;
+  gap: 0.48rem;
+  min-height: 42px;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+}
+
+.phone {
+  color: var(--forest);
+}
+
+.whatsapp {
+  background: var(--forest);
+  color: white;
+}
+
+.phone svg,
+.whatsapp svg {
+  fill: none;
+  height: 18px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  width: 18px;
+}
+
+@media (max-width: 980px) {
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .phone span {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .announcement {
+    font-size: 0.61rem;
+    gap: 0.4rem;
+    letter-spacing: 0.08em;
+  }
+
+  .header {
+    min-height: 72px;
+    padding: 0.35rem 0.85rem;
+  }
+
+  .brand {
+    font-size: 1.08rem;
+  }
+
+  .brand img {
+    height: 48px;
+    width: 54px;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .whatsapp {
+    min-height: 38px;
+    padding: 0.55rem 0.8rem;
+  }
+}
