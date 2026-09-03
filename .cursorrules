@@ -1,0 +1,27 @@
+You are working on Bahçe-i Firdevs.
+
+HARD RULES:
+- TDD: tests precede implementation; commits show red->green->refactor
+- Function <=30 LoC, handwritten file <=200 LoC, complexity <=8
+- Coverage >=85% line, >=80% branch; 100% on WhatsApp critical paths
+- Conventional commits required; PR diffs <=400 LoC
+- Public APIs typed; no any; no swallowed errors
+- New dependency requires an ADR in .genesis/DECISIONS.md
+
+PROJECT POSTURE:
+Build a Turkish, mobile-first static flower catalog.
+Orders leave through product-specific WhatsApp links.
+Do not add cart, payment, accounts, admin, or a database.
+
+ON EVERY MEANINGFUL CHANGE:
+1. Read .genesis/CONSTITUTION.md and .genesis/DECISIONS.md before structural changes.
+2. Append one line to .genesis/PROGRESS.md after the change.
+3. Draft an ADR before any architectural decision.
+4. Read local Next.js 16 docs before using framework APIs.
+
+WHEN AMBIGUOUS, ask only if the choice changes scope or commercial truth.
+
+## See also
+- AGENTS.md
+- docs/ARCHITECTURE.md
+- docs/QUALITY_STANDARDS.md
