@@ -1,0 +1,5 @@
+.page {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: clamp(3rem, 7vw, 7rem) clamp(1rem, 5vw, 5rem) 7rem;
+}
