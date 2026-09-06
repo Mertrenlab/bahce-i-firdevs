@@ -1,0 +1,148 @@
+.featured,
+.ordering {
+  margin-inline: auto;
+  max-width: var(--max-width);
+}
+
+.featured {
+  padding: 5rem clamp(1rem, 5vw, 5rem) 7rem;
+}
+
+.sectionHeading {
+  align-items: end;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+.sectionHeading p,
+.orderIntro > p {
+  color: var(--copper);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  margin: 0 0 0.65rem;
+  text-transform: uppercase;
+}
+
+.sectionHeading h2,
+.orderIntro h2 {
+  color: var(--forest);
+  font-family: var(--font-display);
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.sectionHeading > a {
+  align-items: center;
+  color: var(--forest);
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 750;
+  gap: 0.45rem;
+  text-decoration: none;
+}
+
+.sectionHeading svg {
+  fill: none;
+  height: 18px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  width: 18px;
+}
+
+.ordering {
+  background: var(--sage-light);
+  border-radius: clamp(1.5rem, 4vw, 4rem);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 0.85fr 1.6fr;
+  padding: clamp(2.5rem, 6vw, 5.5rem);
+}
+
+.orderIntro h2 {
+  font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+}
+
+.orderIntro > a {
+  align-items: center;
+  background: var(--forest);
+  border-radius: 999px;
+  color: white;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 750;
+  gap: 0.5rem;
+  margin-top: 1.7rem;
+  min-height: 48px;
+  padding: 0.75rem 1.1rem;
+  text-decoration: none;
+}
+
+.orderIntro svg {
+  fill: none;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  width: 18px;
+}
+
+.steps {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.steps article {
+  background: rgb(255 253 249 / 0.75);
+  border: 1px solid rgb(24 55 44 / 0.08);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.steps span {
+  color: var(--copper);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+}
+
+.steps h3 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 2.5rem 0 0.55rem;
+}
+
+.steps p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 880px) {
+  .ordering {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .steps h3 {
+    margin-top: 1.2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .sectionHeading {
+    align-items: start;
+    flex-direction: column;
+  }
+}
