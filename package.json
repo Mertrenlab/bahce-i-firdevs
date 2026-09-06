@@ -15,7 +15,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check:secrets": "node scripts/check-secrets.mjs",
-    "quality": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:coverage && pnpm build"
+    "check:shape": "node scripts/check-file-shape.mjs",
+    "prepare": "git config core.hooksPath .githooks 2>/dev/null || true",
+    "quality": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm check:shape && pnpm check:secrets && pnpm test:coverage && pnpm build"
   },
   "dependencies": {
     "next": "16.2.1",

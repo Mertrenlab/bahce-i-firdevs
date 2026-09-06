@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+
+pnpm format:check
+pnpm lint
+pnpm typecheck
+pnpm check:shape
+pnpm test
+pnpm check:secrets

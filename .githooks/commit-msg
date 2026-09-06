@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+message=$(head -n 1 "$1")
+pattern='^(feat|fix|refactor|test|docs|chore|perf|build|ci|style|revert)(\([a-z0-9-]+\))?: .+'
+
+if ! printf '%s' "$message" | grep -Eq "$pattern"; then
+  printf '%s\n' "Commit message must follow Conventional Commits." >&2
+  exit 1
+fi
