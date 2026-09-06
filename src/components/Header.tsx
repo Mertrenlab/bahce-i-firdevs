@@ -27,7 +27,11 @@ export default function Header() {
         <span>WhatsApp ile kolay sipariş</span>
       </div>
       <header className={styles.header}>
-        <Link className={styles.brand} href="/" aria-label="Bahçe-i Firdevs ana sayfa">
+        <Link
+          className={styles.brand}
+          href="/"
+          aria-label="Bahçe-i Firdevs ana sayfa"
+        >
           <Image
             src="/brand/bahce-i-firdevs-mark.png"
             alt=""
@@ -45,11 +49,18 @@ export default function Header() {
           ))}
         </nav>
         <div className={styles.actions}>
-          <a className={styles.phone} href={buildPhoneUrl()} aria-label={brand.phoneDisplay}>
+          <a
+            className={styles.phone}
+            href={buildPhoneUrl()}
+            aria-label={brand.phoneDisplay}
+          >
             <PhoneIcon />
             <span>{brand.phoneDisplay}</span>
           </a>
-          <WhatsAppLink className={styles.whatsapp} ariaLabel="WhatsApp'tan yaz">
+          <WhatsAppLink
+            className={styles.whatsapp}
+            ariaLabel="WhatsApp'tan yaz"
+          >
             <WhatsAppIcon />
             <span>WhatsApp</span>
           </WhatsAppLink>

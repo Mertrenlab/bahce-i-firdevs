@@ -4,16 +4,16 @@ Bu kayıt append-only'dir. Bir kararı değiştirmek için eski gövdeyi düzenl
 
 ## Index
 
-| ID | Date | Title | Status |
-|---|---|---|---|
-| ADR-001 | 2026-09-03 | Genesis Protocol kitini benimse | accepted |
-| ADR-002 | 2026-09-03 | Open Ecommerce Next tabanını küçült | accepted |
-| ADR-003 | 2026-09-03 | Statik katalog ve WhatsApp siparişi kullan | accepted |
-| ADR-004 | 2026-09-03 | Türkçe, TRY ve resmi logo ile tek pazar kur | accepted |
-| ADR-005 | 2026-09-03 | WhatsApp akışını kritik yol say | accepted |
-| ADR-006 | 2026-09-03 | Vercel önizleme ve commit rollback kullan | accepted |
-| ADR-DEP-001 | 2026-09-03 | Vitest V8 coverage sağlayıcısını ekle | accepted |
-| ADR-DEP-002 | 2026-09-03 | Prettier biçim denetimini ekle | accepted |
+| ID          | Date       | Title                                       | Status   |
+| ----------- | ---------- | ------------------------------------------- | -------- |
+| ADR-001     | 2026-09-03 | Genesis Protocol kitini benimse             | accepted |
+| ADR-002     | 2026-09-03 | Open Ecommerce Next tabanını küçült         | accepted |
+| ADR-003     | 2026-09-03 | Statik katalog ve WhatsApp siparişi kullan  | accepted |
+| ADR-004     | 2026-09-03 | Türkçe, TRY ve resmi logo ile tek pazar kur | accepted |
+| ADR-005     | 2026-09-03 | WhatsApp akışını kritik yol say             | accepted |
+| ADR-006     | 2026-09-03 | Vercel önizleme ve commit rollback kullan   | accepted |
+| ADR-DEP-001 | 2026-09-03 | Vitest V8 coverage sağlayıcısını ekle       | accepted |
+| ADR-DEP-002 | 2026-09-03 | Prettier biçim denetimini ekle              | accepted |
 
 ---
 

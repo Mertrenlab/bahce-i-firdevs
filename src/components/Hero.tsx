@@ -18,8 +18,8 @@ export default function Hero() {
           Kalpten gelen <em>çiçekler.</em>
         </h1>
         <p className={styles.lead}>
-          Sevdiklerinize söylemek istediklerinizi mevsimin en güzel
-          çiçekleriyle anlatın. Her aranjman size özel, özenle hazırlanır.
+          Sevdiklerinize söylemek istediklerinizi mevsimin en güzel çiçekleriyle
+          anlatın. Her aranjman size özel, özenle hazırlanır.
         </p>
         <div className={styles.actions}>
           <Link className={styles.primary} href="/urunler">
@@ -30,9 +30,15 @@ export default function Hero() {
           </WhatsAppLink>
         </div>
         <div className={styles.assurances}>
-          <span><i>01</i> Taze çiçekler</span>
-          <span><i>02</i> Size özel hazırlık</span>
-          <span><i>03</i> WhatsApp ile kolay sipariş</span>
+          <span>
+            <i>01</i> Taze çiçekler
+          </span>
+          <span>
+            <i>02</i> Size özel hazırlık
+          </span>
+          <span>
+            <i>03</i> WhatsApp ile kolay sipariş
+          </span>
         </div>
       </div>
       <div className={styles.visual} aria-label="Bahçe-i Firdevs resmi logosu">

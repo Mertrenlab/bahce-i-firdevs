@@ -34,7 +34,8 @@ export const products: readonly Product[] = [
     name: "Beyaz Düş",
     category: "Çiçekler",
     occasion: "Saf ve sakin",
-    shortDescription: "Beyaz çiçekler ve zarif yeşilliklerle ferah bir görünüm.",
+    shortDescription:
+      "Beyaz çiçekler ve zarif yeşilliklerle ferah bir görünüm.",
     description:
       "Sade ama etkileyici bir hediye arayanlar için açık tonlu, dingin bir kompozisyon. Güncel çiçek seçimi sipariş sırasında paylaşılır.",
     image: "/products/beyaz-dus.svg",
@@ -47,7 +48,8 @@ export const products: readonly Product[] = [
     name: "Gül Vakti",
     category: "Çiçekler",
     occasion: "Kalpten gelen",
-    shortDescription: "Gül tonlarının sıcaklığını modern bir bukette buluşturur.",
+    shortDescription:
+      "Gül tonlarının sıcaklığını modern bir bukette buluşturur.",
     description:
       "Romantik anlar ve içten kutlamalar için hazırlanan gül ağırlıklı bir seçki. Ton ve adet seçenekleri WhatsApp görüşmesinde netleştirilir.",
     image: "/products/gul-vakti.svg",

@@ -13,23 +13,20 @@ describe("brand contact surfaces", () => {
   it("shows the official Instagram and phone targets in the footer", () => {
     render(<Footer />);
 
-    expect(screen.getByRole("link", { name: brand.instagramLabel })).toHaveAttribute(
-      "href",
-      brand.instagramUrl,
-    );
-    expect(screen.getByRole("link", { name: brand.phoneDisplay })).toHaveAttribute(
-      "href",
-      buildPhoneUrl(),
-    );
+    expect(
+      screen.getByRole("link", { name: brand.instagramLabel }),
+    ).toHaveAttribute("href", brand.instagramUrl);
+    expect(
+      screen.getByRole("link", { name: brand.phoneDisplay }),
+    ).toHaveAttribute("href", buildPhoneUrl());
   });
 
   it("keeps the general WhatsApp action available", () => {
     render(<FloatingWhatsApp />);
 
-    expect(screen.getByRole("link", { name: "WhatsApp'tan sipariş ver" })).toHaveAttribute(
-      "href",
-      buildWhatsAppUrl(),
-    );
+    expect(
+      screen.getByRole("link", { name: "WhatsApp'tan sipariş ver" }),
+    ).toHaveAttribute("href", buildWhatsAppUrl());
   });
 });
 
@@ -38,10 +35,9 @@ describe("home discovery", () => {
     render(<Hero />);
 
     expect(screen.getByText("WhatsApp ile kolay sipariş")).toBeVisible();
-    expect(screen.getByRole("link", { name: "Çiçekleri keşfet" })).toHaveAttribute(
-      "href",
-      "/urunler",
-    );
+    expect(
+      screen.getByRole("link", { name: "Çiçekleri keşfet" }),
+    ).toHaveAttribute("href", "/urunler");
   });
 
   it("renders every catalog product", () => {

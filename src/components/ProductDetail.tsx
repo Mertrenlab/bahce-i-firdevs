@@ -46,10 +46,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             <strong>Fiyat ve teslimat için bize yazın</strong>
           </div>
           <div className={styles.actions}>
-            <WhatsAppLink
-              className={styles.primary}
-              productName={product.name}
-            >
+            <WhatsAppLink className={styles.primary} productName={product.name}>
               <WhatsAppIcon />
               WhatsApp&apos;tan Sipariş Ver
             </WhatsAppLink>

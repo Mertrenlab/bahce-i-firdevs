@@ -29,7 +29,9 @@ describe("ProductCard", () => {
     expect(screen.getByText(product.name)).toBeInTheDocument();
     expect(screen.getByText("Temsili görsel")).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: `${product.name} için WhatsApp'tan yaz` }),
+      screen.getByRole("link", {
+        name: `${product.name} için WhatsApp'tan yaz`,
+      }),
     ).toHaveAttribute("href", buildWhatsAppUrl(product.name));
   });
 });

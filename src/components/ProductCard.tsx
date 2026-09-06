@@ -41,7 +41,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             ariaLabel={`${product.name} için WhatsApp'tan yaz`}
           >
             <WhatsAppIcon />
-            WhatsApp'tan yaz
+            WhatsApp&apos;tan yaz
           </WhatsAppLink>
           <Link className={styles.detail} href={`/urunler/${product.slug}`}>
             İncele <ArrowIcon />

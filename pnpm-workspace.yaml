@@ -2,4 +2,4 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
 minimumReleaseAgeExclude:
-  - '@rolldown/binding-linux-ppc64-gnu@1.2.7'
+  - "@rolldown/binding-linux-ppc64-gnu@1.2.7"

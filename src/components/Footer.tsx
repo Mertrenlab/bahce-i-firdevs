@@ -45,7 +45,9 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.bottom}>
-        <span>© {new Date().getFullYear()} {brand.name}</span>
+        <span>
+          © {new Date().getFullYear()} {brand.name}
+        </span>
         <span>Çiçekler mevsim ve stok durumuna göre değişebilir.</span>
       </div>
     </footer>

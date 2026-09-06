@@ -6,12 +6,12 @@ Uygulama, Next.js App Router üzerinde veri odaklı modüler bir vitrin olarak �
 
 ## Module boundaries
 
-| Module | Responsibility | Not responsible for |
-|---|---|---|
-| `src/data` | Ürünler ve marka bilgileri | Sipariş kaydı, stok senkronizasyonu |
-| `src/lib` | URL, fiyat ve katalog yardımcıları | Görsel sunum |
-| `src/components` | Tekrar kullanılan erişilebilir arayüz | Ticari kural saklamak |
-| `src/app` | Rotalar, metadata ve sayfa kompozisyonu | Katalog verisini çoğaltmak |
+| Module           | Responsibility                          | Not responsible for                 |
+| ---------------- | --------------------------------------- | ----------------------------------- |
+| `src/data`       | Ürünler ve marka bilgileri              | Sipariş kaydı, stok senkronizasyonu |
+| `src/lib`        | URL, fiyat ve katalog yardımcıları      | Görsel sunum                        |
+| `src/components` | Tekrar kullanılan erişilebilir arayüz   | Ticari kural saklamak               |
+| `src/app`        | Rotalar, metadata ve sayfa kompozisyonu | Katalog verisini çoğaltmak          |
 
 ### Module: catalog
 
@@ -40,13 +40,13 @@ Uygulama, Next.js App Router üzerinde veri odaklı modüler bir vitrin olarak �
 
 ## Tech stack
 
-| Layer | Choice | Rationale | ADR |
-|---|---|---|---|
-| Language | TypeScript strict | Yapılandırma ve katalog hatalarını derleme anında yakalar | ADR-002 |
-| Framework | Next.js 16.2.1 | Seçilen Open Ecommerce tabanıyla uyumludur | ADR-002 |
-| UI | React 19.2.4 + CSS Modules | Mevcut tabanın hafif ve bağımlılıksız sunum katmanıdır | ADR-002 |
-| Database | None | MVP statik katalog ve WhatsApp yönlendirmesidir | ADR-003 |
-| Tests | Vitest + Testing Library | Saf URL mantığı ve bileşen akışını hızlı doğrular | ADR-005 |
+| Layer     | Choice                     | Rationale                                                 | ADR     |
+| --------- | -------------------------- | --------------------------------------------------------- | ------- |
+| Language  | TypeScript strict          | Yapılandırma ve katalog hatalarını derleme anında yakalar | ADR-002 |
+| Framework | Next.js 16.2.1             | Seçilen Open Ecommerce tabanıyla uyumludur                | ADR-002 |
+| UI        | React 19.2.4 + CSS Modules | Mevcut tabanın hafif ve bağımlılıksız sunum katmanıdır    | ADR-002 |
+| Database  | None                       | MVP statik katalog ve WhatsApp yönlendirmesidir           | ADR-003 |
+| Tests     | Vitest + Testing Library   | Saf URL mantığı ve bileşen akışını hızlı doğrular         | ADR-005 |
 
 ## Data model
 
