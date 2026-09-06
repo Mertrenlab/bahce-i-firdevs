@@ -1,0 +1,76 @@
+:root {
+  --brand-cream: #fff8ee;
+  --cream: #fdf8ef;
+  --paper: #fffdf9;
+  --forest: #18372c;
+  --forest-soft: #365a4b;
+  --copper: #995e3d;
+  --copper-dark: #744128;
+  --copper-light: #d9a27d;
+  --sage: #c8d3be;
+  --sage-light: #e9eee4;
+  --muted: #627069;
+  --line: rgb(24 55 44 / 0.13);
+  --max-width: 1480px;
+  --radius-lg: 1.25rem;
+  --font-display:
+    "Iowan Old Style", "Palatino Linotype", Baskerville, Georgia, serif;
+  --font-body:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at 88% 12%,
+      rgb(200 211 190 / 0.34),
+      transparent 28rem
+    ),
+    var(--cream);
+  color: var(--forest);
+  font-family: var(--font-body);
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--copper) 68%, white);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--copper);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
