@@ -13,10 +13,11 @@
 }
 
 .identity img {
-  filter: brightness(0) invert(1);
+  background: var(--brand-cream);
+  border-radius: 1rem;
   height: auto;
-  opacity: 0.9;
-  width: 112px;
+  padding: 0.75rem;
+  width: 136px;
 }
 
 .identity p {
@@ -92,6 +93,7 @@
 
   .bottom {
     flex-direction: column;
+    padding-bottom: 4rem;
   }
 }
 

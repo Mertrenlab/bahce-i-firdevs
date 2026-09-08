@@ -10,11 +10,13 @@ Bu proje, MIT lisanslı Open Ecommerce `storefront-single` yaklaşımından kü�
 
 ## Status
 
-MVP in progress.
+Yerel önizleme hazır: ana sayfa, altı örnek çiçek, ürün detayları, hikâye ve iletişim sayfaları çalışır. Ürün adıyla hazırlanan WhatsApp bağlantıları `+90 540 638 34 34` numarasına gider. Sepet, ödeme ve üyelik yoktur.
+
+Yayın öncesi firma fotoğrafları, gerçek ürün adları/açıklamaları ve alan adı bekleniyor. Mevcut ürün adları ve çizimler örnek katalogdur; fiyat veya teslimat sözü verilmez.
 
 ## Quick start
 
-Node.js 20+ ve pnpm gerekir.
+Node.js 24 ve package.json içinde sabitlenen pnpm sürümü önerilir.
 
 ```bash
 pnpm install
@@ -24,13 +26,28 @@ pnpm dev
 
 Sonra `http://127.0.0.1:3000` adresini açın. Çalışma zamanı env değişkeni gerekmez.
 
+Üretim önizlemesi: `pnpm build` ardından `pnpm start --hostname 127.0.0.1 --port 3000`.
+Yayında `.env.example` içindeki `NEXT_PUBLIC_SITE_URL` değerini gerçek HTTPS alan adıyla ayarlayın; aksi halde sitemap yerel adres kullanır.
+
+## İçerikleri tamamlama
+
+- Fotoğrafları `public/products/` altına koyun, ürünlerin `image` ve `imageAlt` alanlarını `src/data/products.ts` içinde güncelleyin.
+- Gerçek fotoğrafı olan üründe `isPlaceholder: false` yapın; temsili görsel etiketi kalkar.
+- Ürün adlarını, açıklamalarını ve sıralamayı firma onayına göre aynı katalog dosyasında düzenleyin.
+- Telefon ve Instagram bilgileri `src/data/brand.ts` içinde tek yerden yönetilir.
+- Adres, çalışma saatleri ve teslimat kapsamı doğrulanmadan eklenmez.
+
+## Doğrulama
+
+`pnpm quality` biçim, lint, tip, dosya uzunluğu, temel secret taraması, test ve üretim derlemesini çalıştırır. 45 uygulama testi ve 5 araç testi bulunur. Kapsam ölçümü sayfalar, bileşenler, katalog ve yardımcıları içerir; Next belge kabuğu (`layout.tsx`) ve CSS bu ölçümün dışındadır. Görsel kalite ve gerçek WhatsApp mesaj teslimi bu yüzdeyle ölçülmez.
+
 ## Project structure
 
 ```text
 src/app/         sayfalar ve metadata
 src/components/  tekrar kullanılan arayüz
 src/data/        marka ve ürün kataloğu
-src/lib/         WhatsApp, fiyat ve katalog yardımcıları
+src/lib/         WhatsApp ve site adresi yardımcıları
 public/brand/    resmi logo kaynakları
 public/products/ geçici/gerçek ürün görselleri
 docs/            kapsam, mimari ve kalite kuralları

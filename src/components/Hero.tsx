@@ -45,10 +45,11 @@ export default function Hero() {
         <span className={styles.orbit} aria-hidden="true" />
         <div className={styles.logoCard}>
           <Image
-            src="/brand/bahce-i-firdevs-lockup.png"
+            src="/brand/bahce-i-firdevs-logo.png"
             alt="Bahçe-i Firdevs çiçekli BF logosu"
-            width={945}
-            height={990}
+            width={1000}
+            height={1000}
+            sizes="(max-width: 900px) 90vw, 40vw"
             priority
           />
         </div>

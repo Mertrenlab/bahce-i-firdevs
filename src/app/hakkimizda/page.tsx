@@ -1,5 +1,6 @@
 /** Brand story page using only verified and intentionally general claims. */
 import type { Metadata } from "next";
+import Image from "next/image";
 
 import PageIntro from "@/components/PageIntro";
 
@@ -19,8 +20,14 @@ export default function AboutPage() {
         description="Her duygunun kendine özgü bir rengi, her çiçeğin anlatacak bir hikâyesi olduğuna inanıyoruz."
       />
       <section className={styles.content}>
-        <div className={styles.monogram} aria-hidden="true">
-          BF
+        <div className={styles.monogram}>
+          <Image
+            src="/brand/bahce-i-firdevs-mark.png"
+            alt="Bahçe-i Firdevs çiçekli BF logosu"
+            width={630}
+            height={560}
+            sizes="(max-width: 820px) 80vw, 35vw"
+          />
         </div>
         <div className={styles.prose}>
           <h2>Bir buketten daha fazlası</h2>

@@ -2,6 +2,7 @@
  * Home page composition for discovery, trust, and WhatsApp ordering.
  * Not responsible for owning product or contact data.
  */
+import Image from "next/image";
 import Link from "next/link";
 
 import Hero from "@/components/Hero";
@@ -59,7 +60,15 @@ export default function HomePage() {
         </div>
       </section>
       <section className={narrative.story}>
-        <div className={narrative.storyMark}>BF</div>
+        <div className={narrative.storyMark}>
+          <Image
+            src="/brand/bahce-i-firdevs-mark.png"
+            alt="Bahçe-i Firdevs çiçekli BF logosu"
+            width={630}
+            height={560}
+            sizes="(max-width: 880px) 70vw, 30vw"
+          />
+        </div>
         <div>
           <p className={narrative.kicker}>Bahçe-i Firdevs</p>
           <h2>Her çiçek bir duygunun sessiz cümlesidir.</h2>

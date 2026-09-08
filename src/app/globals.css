@@ -28,6 +28,10 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  scroll-margin-top: 8rem;
+}
+
 body {
   background:
     radial-gradient(

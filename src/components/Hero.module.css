@@ -7,7 +7,7 @@
   max-width: var(--max-width);
   min-height: calc(100svh - 122px);
   overflow: hidden;
-  padding: clamp(3rem, 7vw, 7.5rem) clamp(1rem, 5vw, 5rem);
+  padding: clamp(2.5rem, 4vw, 4rem) clamp(1rem, 5vw, 5rem);
 }
 
 .copy {
@@ -30,7 +30,7 @@
   font-size: clamp(4rem, 8.5vw, 8.8rem);
   font-weight: 500;
   letter-spacing: -0.06em;
-  line-height: 0.78;
+  line-height: 0.92;
   margin: 0;
   max-width: 7.5ch;
 }
@@ -114,7 +114,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 600px;
+  min-height: 500px;
   position: relative;
 }
 
@@ -163,7 +163,7 @@
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 4.5rem;
+    padding-top: 2.5rem;
   }
 
   .visual {

@@ -10,14 +10,16 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "test:tooling": "node --test scripts/*.test.mjs",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check:secrets": "node scripts/check-secrets.mjs",
+    "check:secrets:tracked": "node scripts/check-secrets.mjs --tracked",
     "check:shape": "node scripts/check-file-shape.mjs",
     "prepare": "git config core.hooksPath .githooks 2>/dev/null || true",
-    "quality": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm check:shape && pnpm check:secrets && pnpm test:coverage && pnpm build"
+    "quality": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm check:shape && pnpm check:secrets && pnpm test:tooling && pnpm test:coverage && pnpm build"
   },
   "dependencies": {
     "next": "16.2.1",

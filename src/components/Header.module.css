@@ -44,7 +44,7 @@
 .brand img {
   height: 58px;
   object-fit: contain;
-  width: 66px;
+  width: auto;
 }
 
 .nav {
@@ -128,7 +128,23 @@
   }
 
   .nav {
-    display: none;
+    border-top: 1px solid var(--line);
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+    margin-top: 0.4rem;
+  }
+
+  .nav a {
+    align-items: center;
+    display: inline-flex;
+    font-size: 0.8rem;
+    min-height: 44px;
+  }
+
+  .actions {
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .phone span {
@@ -138,9 +154,12 @@
 
 @media (max-width: 580px) {
   .announcement {
-    font-size: 0.61rem;
-    gap: 0.4rem;
-    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+
+  .announcement > span:not(:last-child) {
+    display: none;
   }
 
   .header {
@@ -154,7 +173,7 @@
 
   .brand img {
     height: 48px;
-    width: 54px;
+    width: auto;
   }
 
   .phone {
@@ -162,7 +181,13 @@
   }
 
   .whatsapp {
-    min-height: 38px;
+    min-height: 44px;
     padding: 0.55rem 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .whatsapp span {
+    display: none;
   }
 }

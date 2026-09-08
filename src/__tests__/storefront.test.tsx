@@ -21,9 +21,7 @@ describe("storefront navigation", () => {
 });
 
 describe("ProductCard", () => {
-  it("labels temporary imagery and links the selected flower", () => {
-    const product = products[0];
-
+  it.each(products)("links $name to its own message and detail", (product) => {
     render(<ProductCard product={product} />);
 
     expect(screen.getByText(product.name)).toBeInTheDocument();
@@ -33,18 +31,43 @@ describe("ProductCard", () => {
         name: `${product.name} için WhatsApp'tan yaz`,
       }),
     ).toHaveAttribute("href", buildWhatsAppUrl(product.name));
+    expect(screen.getByRole("link", { name: "İncele" })).toHaveAttribute(
+      "href",
+      `/urunler/${product.slug}`,
+    );
+  });
+
+  it("does not label a real product image as a placeholder", () => {
+    render(<ProductCard product={{ ...products[0], isPlaceholder: false }} />);
+
+    expect(screen.queryByText("Temsili görsel")).not.toBeInTheDocument();
+    expect(screen.getByRole("img")).toHaveAttribute(
+      "alt",
+      products[0].imageAlt,
+    );
   });
 });
 
 describe("ProductDetail", () => {
-  it("makes WhatsApp ordering the primary action", () => {
-    const product = products[1];
-
+  it.each(products)("prepares a WhatsApp order for $name", (product) => {
     render(<ProductDetail product={product} />);
 
     expect(
       screen.getByRole("link", { name: "WhatsApp'tan Sipariş Ver" }),
     ).toHaveAttribute("href", buildWhatsAppUrl(product.name));
     expect(screen.getByText("Fiyat ve teslimat için bize yazın")).toBeVisible();
+    expect(screen.getByText("Temsili görsel")).toBeVisible();
+  });
+
+  it("removes the temporary-image label when a real photo is supplied", () => {
+    render(
+      <ProductDetail product={{ ...products[0], isPlaceholder: false }} />,
+    );
+
+    expect(screen.queryByText("Temsili görsel")).not.toBeInTheDocument();
+    expect(screen.getByRole("img")).toHaveAttribute(
+      "alt",
+      products[0].imageAlt,
+    );
   });
 });
